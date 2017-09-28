@@ -1,22 +1,22 @@
 /*
 ===========================================================================
 
-  Copyright (c) 2010-2015 Darkstar Dev Teams
+Copyright (c) 2010-2015 Darkstar Dev Teams
 
-  This program is free software: you can redistribute it and/or modify
-  it under the terms of the GNU General Public License as published by
-  the Free Software Foundation, either version 3 of the License, or
-  (at your option) any later version.
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
 
-  This program is distributed in the hope that it will be useful,
-  but WITHOUT ANY WARRANTY; without even the implied warranty of
-  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-  GNU General Public License for more details.
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
 
-  You should have received a copy of the GNU General Public License
-  along with this program.  If not, see http://www.gnu.org/licenses/
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see http://www.gnu.org/licenses/
 
-  This file is part of DarkStar-server source code.
+This file is part of DarkStar-server source code.
 
 ===========================================================================
 */
@@ -34,12 +34,19 @@
 /*main events*/
 #define LOGIN_ATTEMPT      0x10
 #define LOGIN_CREATE	   0x20
+#define LOGIN_CREATE_NYU   0x30
+#define SEND_VERIFICATION  0x40
 /*return result*/
-#define LOGIN_SUCCESS	       0x01
-#define LOGIN_SUCCESS_CREATE   0x03
+#define LOGIN_SUCCESS	                0x01
+#define LOGIN_SUCCESS_CREATE            0x03
 
-#define LOGIN_ERROR		       0x02
-#define LOGIN_ERROR_CREATE     0x04
+#define LOGIN_ERROR		                0x02
+#define LOGIN_ERROR_CREATE              0x04
+#define VERIFICATION_ERROR_SENDING      0x05
+#define VERIFICATION_SUCCESS_SENDING    0x06
+#define DB_ERROR                        0x07
+#define VERIFICATION_ERROR_MATCHING     0x08
+
 
 extern int32 login_fd;
 /*
