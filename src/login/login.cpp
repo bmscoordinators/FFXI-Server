@@ -36,6 +36,8 @@
 #include "lobby.h"
 #include "message_server.h"
 
+#include <curl/curl.h>
+
 const char* LOGIN_CONF_FILENAME = nullptr;
 const char* VERSION_INFO_FILENAME = nullptr;
 
@@ -125,6 +127,9 @@ void do_final(int code)
 
     timer_final();
     socket_final();
+
+    // Because we use curl_global_init, we must call this function here (at the end of program). - JP, 9/24/17
+    curl_global_cleanup();
 
     exit(code);
 }

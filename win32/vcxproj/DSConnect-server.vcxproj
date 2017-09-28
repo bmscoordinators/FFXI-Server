@@ -1,6 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="CURL_STATICLIB|Win32">
+      <Configuration>CURL_STATICLIB</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="CURL_STATICLIB|x64">
+      <Configuration>CURL_STATICLIB</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
     <ProjectConfiguration Include="Debug|Win32">
       <Configuration>Debug</Configuration>
       <Platform>Win32</Platform>
@@ -84,6 +92,7 @@
     <ProjectGuid>{E50EB22C-08C8-4FDA-91AD-DE5062AF5619}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>DSConnectserver</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.15063.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -137,6 +146,12 @@
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>MultiByte</CharacterSet>
     <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='CURL_STATICLIB|Win32'">
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='CURL_STATICLIB|x64'">
+    <PlatformToolset>v141</PlatformToolset>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">
@@ -224,13 +239,14 @@
       </PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
-      <PreprocessorDefinitions>WIN32;NOMINMAX;FMT_HEADER_ONLY;FMT_USE_WINDOWS_H=0;_DEBUG;_CONSOLE;_CRT_SECURE_NO_WARNINGS;dsTCPSERV;DEBUGLOGLOGIN;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>$(ProjectDir)..\external;$(ProjectDir)..\external\mysql;$(ProjectDir)..\external\zmq;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>CURL_STATICLIB;WIN32;NOMINMAX;FMT_HEADER_ONLY;FMT_USE_WINDOWS_H=0;_DEBUG;_CONSOLE;_CRT_SECURE_NO_WARNINGS;dsTCPSERV;DEBUGLOGLOGIN;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\external;$(ProjectDir)..\external\curl;$(ProjectDir)..\external\mysql;$(ProjectDir)..\external\zmq;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>libmariadb.lib;libzmq.lib;WS2_32.Lib</AdditionalDependencies>
+      <AdditionalDependencies>libmariadb.lib;libzmq.lib;libcurl_a.lib;WS2_32.Lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>..\..\lib</AdditionalLibraryDirectories>
       <OutputFile>$(OutDir)$(ProjectName)$(TargetExt)</OutputFile>
     </Link>
