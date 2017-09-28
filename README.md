@@ -3,6 +3,11 @@ FFXI Server
 
 This is a fork of darkstar project.
 
+Required additional files
+========
+You need to add sendgrid.conf file in conf folder in order to be able to create game accounts. It can be found in google drive, "FFXI Project Coding."
+Also you need to use xiloader.exe from the client side to be able to sign up. It can be found in google drive, "FFXI Project Coding."
+
 Pull Requests
 ========
 Do not directly push any code to this repository! If you do, you risk overriding someone else's work and getting yours overwritten.
@@ -14,10 +19,6 @@ Clone your forked repository, and commit and push to your forked repository in o
 When you want to bring the changes to the main repository, create pull request following this guideline: https://help.github.com/articles/creating-a-pull-request-from-a-fork/
 
 Commits should contain a descriptive name for what you are modifying
-
-Remember to check back for any feedback, and drop a comment once requested changes have been made (if there are any).
-
-Use 4 spaces per tab - this will be enforced in pull requests.
 
 Please *test your code* before committing changes/submitting a pull request.
 
