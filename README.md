@@ -3,6 +3,8 @@ FFXI Server
 
 This is a fork of darkstar project.
 
+PLEASE READ THIS README BEFORE CONTRIBUTING TO THIS REPOSITORY.
+
 Required additional files
 ========
 You need to add sendgrid.conf file in conf folder in order to be able to create game accounts. It can be found in google drive, "FFXI Project Coding."
@@ -15,7 +17,7 @@ Refrain from editing the repository on our B1 laptop directly.
 
 Ideally we would use other test servers (or your own), push your changes to your forked repo, and then create pull request online.
 
-We would want to only git pull on B1 laptop.
+On B1 laptop, we would want to only git pull changes we made on the repository.
 
 Pull Requests
 ========
@@ -31,7 +33,9 @@ Commits should contain a descriptive name for what you are modifying
 
 Please test your code before committing changes/submitting a pull request.
 
-And git pull regularly! Use git stash to preserve your work when using git pull.
+Maintain your forked repository up-to-date
+========
+Use git pull to download changes on the bmscoordinators/FFXI-Server to your forked version, and do so whenever we accept git pull request! Use git stash or git rebase to preserve your work after downloading changes. Refer to this guideline: https://stackoverflow.com/questions/3903817/pull-new-updates-from-original-github-repository-into-forked-github-repository
 
 Adding large files
 ========
