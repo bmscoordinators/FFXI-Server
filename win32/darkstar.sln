@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.23107.0
+# Visual Studio 15
+VisualStudioVersion = 15.0.26730.16
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DSConnect-server", "vcxproj\DSConnect-server.vcxproj", "{E50EB22C-08C8-4FDA-91AD-DE5062AF5619}"
 EndProject
@@ -11,6 +11,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DSSearch-server", "vcxproj\
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		CURL_STATICLIB|Win32 = CURL_STATICLIB|Win32
+		CURL_STATICLIB|x64 = CURL_STATICLIB|x64
 		Debug|Win32 = Debug|Win32
 		Debug|x64 = Debug|x64
 		Release|Win32 = Release|Win32
@@ -21,6 +23,10 @@ Global
 		v140_Release|x64 = v140_Release|x64
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E50EB22C-08C8-4FDA-91AD-DE5062AF5619}.CURL_STATICLIB|Win32.ActiveCfg = Debug|Win32
+		{E50EB22C-08C8-4FDA-91AD-DE5062AF5619}.CURL_STATICLIB|Win32.Build.0 = Debug|Win32
+		{E50EB22C-08C8-4FDA-91AD-DE5062AF5619}.CURL_STATICLIB|x64.ActiveCfg = CURL_STATICLIB|x64
+		{E50EB22C-08C8-4FDA-91AD-DE5062AF5619}.CURL_STATICLIB|x64.Build.0 = CURL_STATICLIB|x64
 		{E50EB22C-08C8-4FDA-91AD-DE5062AF5619}.Debug|Win32.ActiveCfg = Debug|Win32
 		{E50EB22C-08C8-4FDA-91AD-DE5062AF5619}.Debug|Win32.Build.0 = Debug|Win32
 		{E50EB22C-08C8-4FDA-91AD-DE5062AF5619}.Debug|x64.ActiveCfg = Debug|x64
@@ -37,6 +43,10 @@ Global
 		{E50EB22C-08C8-4FDA-91AD-DE5062AF5619}.v140_Release|Win32.Build.0 = v140_Release|Win32
 		{E50EB22C-08C8-4FDA-91AD-DE5062AF5619}.v140_Release|x64.ActiveCfg = v140_Release|x64
 		{E50EB22C-08C8-4FDA-91AD-DE5062AF5619}.v140_Release|x64.Build.0 = v140_Release|x64
+		{89A19910-84DB-454D-9C7F-0A47A293867B}.CURL_STATICLIB|Win32.ActiveCfg = Debug|Win32
+		{89A19910-84DB-454D-9C7F-0A47A293867B}.CURL_STATICLIB|Win32.Build.0 = Debug|Win32
+		{89A19910-84DB-454D-9C7F-0A47A293867B}.CURL_STATICLIB|x64.ActiveCfg = CURL_STATICLIB|x64
+		{89A19910-84DB-454D-9C7F-0A47A293867B}.CURL_STATICLIB|x64.Build.0 = CURL_STATICLIB|x64
 		{89A19910-84DB-454D-9C7F-0A47A293867B}.Debug|Win32.ActiveCfg = Debug|Win32
 		{89A19910-84DB-454D-9C7F-0A47A293867B}.Debug|Win32.Build.0 = Debug|Win32
 		{89A19910-84DB-454D-9C7F-0A47A293867B}.Debug|x64.ActiveCfg = Debug|x64
@@ -53,6 +63,10 @@ Global
 		{89A19910-84DB-454D-9C7F-0A47A293867B}.v140_Release|Win32.Build.0 = v140_Release|Win32
 		{89A19910-84DB-454D-9C7F-0A47A293867B}.v140_Release|x64.ActiveCfg = v140_Release|x64
 		{89A19910-84DB-454D-9C7F-0A47A293867B}.v140_Release|x64.Build.0 = v140_Release|x64
+		{5C763F9B-F332-434F-9EE6-B64B15E1E520}.CURL_STATICLIB|Win32.ActiveCfg = Debug|Win32
+		{5C763F9B-F332-434F-9EE6-B64B15E1E520}.CURL_STATICLIB|Win32.Build.0 = Debug|Win32
+		{5C763F9B-F332-434F-9EE6-B64B15E1E520}.CURL_STATICLIB|x64.ActiveCfg = CURL_STATICLIB|x64
+		{5C763F9B-F332-434F-9EE6-B64B15E1E520}.CURL_STATICLIB|x64.Build.0 = CURL_STATICLIB|x64
 		{5C763F9B-F332-434F-9EE6-B64B15E1E520}.Debug|Win32.ActiveCfg = Debug|Win32
 		{5C763F9B-F332-434F-9EE6-B64B15E1E520}.Debug|Win32.Build.0 = Debug|Win32
 		{5C763F9B-F332-434F-9EE6-B64B15E1E520}.Debug|x64.ActiveCfg = Debug|x64
@@ -72,5 +86,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A799A84C-EDF3-4D32-AA07-7A568DEB5AB6}
 	EndGlobalSection
 EndGlobal

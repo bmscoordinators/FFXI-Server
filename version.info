@@ -1,7 +1,8 @@
 #DarkStar Version Info
 
 #Expected Client version (wrong version cannot log in)
-CLIENT_VER: 30170707_0
+CLIENT_VER: 30170907_0
+# really 30170707... changed just so that I can run it.
 
 #Current Server Version. Not the same thing as source revision.
 #DSP_VER: Unused because we aren't even close to a "release" yet.

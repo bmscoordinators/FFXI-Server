@@ -33,6 +33,8 @@
 #include <signal.h>
 #include <cstring>
 #include "fmt/printf.h"
+#include <curl/curl.h>
+#include <ctime>
 
 #ifndef _WIN32
 	#include <unistd.h>
@@ -282,7 +284,13 @@ int main (int argc, char **argv)
 		arg_c = argc;
 		arg_v = argv;
 	}
-
+    // Since we use libcurl in login_auth.cpp, initialize at the beginning of DSConnect is necessary. - JP, 9/24/17
+    curl_global_init(CURL_GLOBAL_ALL);
+    /**
+        We are using random string generator, and for that, initializing pseudo random generator
+        at the beginning of program is essential.  -JP, 9/24/17
+    */ 
+    srand(time(NULL));
     log_init(argc, argv);
 	set_server_type();
 	display_title();
@@ -302,7 +310,12 @@ int main (int argc, char **argv)
 			do_sockets(&rfd,next);
 		}
 	}
-
+    /**
+        do_final in each DSConnect and DSGame is now edited to call curl_global_cleanup.
+        curl_global_cleanup must be called since we call curl_global_init.
+        It must be inside do_final before exit(), so that it will be called once before the program closes.
+        - JP, 9/24/17
+    */
     do_final(EXIT_SUCCESS);
 	return 0;
 }
