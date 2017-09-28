@@ -33,7 +33,7 @@ Commits should contain a descriptive name for what you are modifying
 
 Please test your code before committing changes/submitting a pull request.
 
-Maintain your forked repository up-to-date
+Maintain your forked repo up-to-date
 ========
 Use git pull to download changes on the bmscoordinators/FFXI-Server to your forked version, and do so whenever we accept git pull request! Use git stash or git rebase to preserve your work after downloading changes. Refer to this guideline: https://stackoverflow.com/questions/3903817/pull-new-updates-from-original-github-repository-into-forked-github-repository
 
